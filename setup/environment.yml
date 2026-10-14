@@ -1,0 +1,25 @@
+# Python track: one conda environment ("infovis") for the whole course.
+# You do not need to use this file by hand: the setup scripts in this folder
+# (Setup_Python_Mac.command / Setup_Python_Windows.bat) do it for you.
+# Manual alternative, in a terminal opened in this folder:
+#   conda env create -f environment.yml
+#   conda activate infovis
+#   jupyter lab
+name: infovis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas>=2.2
+  - numpy
+  - matplotlib>=3.8
+  - seaborn>=0.13
+  - plotly>=5.20
+  - altair>=5.3
+  - jupyterlab>=4
+  - ipykernel
+  - adjusttext>=1.1
+  # used later in the course (geospatial, dashboards)
+  - geopandas
+  - folium
+  - streamlit
